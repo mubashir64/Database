@@ -17,6 +17,7 @@
             background-color: #121212;
             color: #e0e0e0;
             line-height: 1.6;
+            overflow: hidden; /* Hide default scroll bars */
         }
 
         #login-container {
@@ -91,6 +92,15 @@
             padding: 20px;
         }
 
+        .posts-container {
+            max-height: 60vh; /* Adjust height as needed */
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background-color: #1e1e1e;
+        }
+
         .posts {
             display: flex;
             flex-direction: column;
@@ -160,23 +170,30 @@
             <h1>Post Dashboard</h1>
         </header>
         <main>
-            <section class="posts">
-                <article class="post">
-                    <h2>Post Title 1</h2>
-                    <p>Content of the first post...</p>
-                    <time datetime="2024-09-15">September 15, 2024</time>
-                </article>
-              <article class="post">
-                    <h2>Post Title 1</h2>
-                    <p>Content of the first post...</p>
-                    <time datetime="2024-09-15">September 15, 2024</time>
-                </article>
-                <article class="post">
-                    <h2>Post Title 2</h2>
-                    <p>Content of the second post...</p>
-                    <time datetime="2024-09-14">September 14, 2024</time>
-                </article>
-                <!-- Add more posts as needed -->
+            <section class="posts-container">
+                <div class="posts">
+                    <article class="post">
+                        <h2>Post Title 1</h2>
+                        <p>Content of the first post...</p>
+                        <time datetime="2024-09-15">September 15, 2024</time>
+                    </article>
+                    <article class="post">
+                        <h2>Post Title 1</h2>
+                        <p>Content of the first post...</p>
+                        <time datetime="2024-09-15">September 15, 2024</time>
+                    </article>
+                    <article class="post">
+                        <h2>Post Title 1</h2>
+                        <p>Content of the first post...</p>
+                        <time datetime="2024-09-15">September 15, 2024</time>
+                    </article>
+                    <article class="post">
+                        <h2>Post Title 2</h2>
+                        <p>Content of the second post...</p>
+                        <time datetime="2024-09-14">September 14, 2024</time>
+                    </article>
+                    <!-- Add more posts as needed -->
+                </div>
             </section>
         </main>
         <footer>
@@ -212,4 +229,4 @@
         });
     </script>
 </body>
-  </html>
+</html>
